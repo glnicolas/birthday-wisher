@@ -39,6 +39,7 @@ class BirthdayMessage extends React.Component {
   render() {
     return (
       <Container>
+        
         <Message style={{ color: this.props.birthdayData.textColor }}>
           Feliz cumple, {this.props.birthdayData.wishee}!
         </Message>
