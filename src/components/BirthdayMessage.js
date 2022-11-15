@@ -1,7 +1,6 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import profile from './profile.jpg';
 
 const ProfileImage = styled.div`
   text-align: center;
@@ -30,32 +29,17 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
 `
 
-const Wisher = styled.div`
-  display: block;
-  white-space: nowrap;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 2rem;
-  margin-top: 1rem;
-  @media screen and (max-width: 900px) {
-    font-size: 1.5rem;
-    white-space: default;
-  }
-`
-
 class BirthdayMessage extends React.Component {
   render() {
     return (
       <Container>
         <ProfileImage>
-          <img src={profile} alt="pic" style={{ width: "15rem" }}/>;
+          <img src={'https://scontent.fzmm1-1.fna.fbcdn.net/v/t39.30808-6/307209069_5461378300598308_290059468305982863_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=174925&_nc_eui2=AeEN11rRwod6VZ6tFmcf-RbJSegNpH3G55RJ6A2kfcbnlIQWDEDohDbO0Wx00ZfxUK6tVUshNA985YWZJapWWWT4&_nc_ohc=WHPIzCc2k6IAX9QvVP3&_nc_ht=scontent.fzmm1-1.fna&oh=00_AfCCo9jtXwqIqu4CnC1W3og5Rit0J9xLzNx7A-Z0VTj-zg&oe=6377EA4A'} alt="pic" style={{ width: "15rem" }} />;
         </ProfileImage>
         <Message style={{ color: this.props.birthdayData.textColor }}>
-          Feliz cumple, {this.props.birthdayData.wishee}!
+          Feliz cumple <br/> {this.props.birthdayData.wishee}!
         </Message>
-        <Wisher style={{ color: this.props.birthdayData.textColor }}>
-          -&nbsp;{this.props.birthdayData.wisher}
-        </Wisher>
+        
       </Container>
     )
   }
